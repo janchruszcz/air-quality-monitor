@@ -1,19 +1,28 @@
 import React from 'react';
-import Navbar from './navbar';
-import Footer from './footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './views/Home';
+import './App.css'; // Assuming you have a global stylesheet
 
-require('dotenv').config();
+const App = () => {
+  const links = [
+    { path: '/', label: 'Home' },
+    // Add more links here as needed
+  ];
 
-class App extends React.Component {
-  
-  render() {
-    return (
-      <div class="h-full">
-        <Navbar />
+  return (
+    <div className="h-full">
+      <Router>
+        <Navbar links={links} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          {/* Add more routes here as needed */}
+        </Switch>
         <Footer />
-      </div>
-    );
-  }
-}
+      </Router>
+    </div>
+  );
+};
 
 export default App;
