@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import Info from '../components/Info';
-import Line from '../components/Line';
+import LineChart from '../components/LineChart';
 import useSpreadsheetData from '../hooks/useSpreadsheetData';
 import PropTypes from 'prop-types';
 
@@ -22,7 +22,7 @@ const Home = () => {
         <Card label="Gas resistance (Ω)" value={gas_resistance} date={date} time={time} />
       </div>
       <div className="py-8">
-        <Line label="Air Quality (%)" labels={lastFiveDays} values={lastFiveMeasures} color="rgba(5, 150, 105, 0.5)" />
+        <LineChart label="Air Quality (%)" labels={lastFiveDays} values={lastFiveMeasures} color="rgba(5, 150, 105, 0.5)" />
       </div>
       <div className="h-auto">
         <Info />

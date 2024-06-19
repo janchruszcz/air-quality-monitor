@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './views/Home';
-import './App.css'; // Assuming you have a global stylesheet
+import Graphs from './views/Graphs';
+import './App.css';
 
 const App = () => {
   const links = [
     { path: '/', label: 'Home' },
-    // Add more links here as needed
+    { path: '/graphs', label: 'Graphs' }
   ];
 
   return (
@@ -17,7 +18,7 @@ const App = () => {
         <Navbar links={links} />
         <Switch>
           <Route exact path="/" component={Home} />
-          {/* Add more routes here as needed */}
+          <Route exact path="/graphs" component={Graphs} />
         </Switch>
         <Footer />
       </Router>
