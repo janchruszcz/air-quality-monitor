@@ -12,7 +12,7 @@ Air Quality Monitor is an embedded system designed to measure and visualize air 
 - [License](#license)
 
 ## Introduction
-This project was originally developed as a bachelor thesis and has since been updated periodically. The system measures various environmental parameters and displays the data on an elegant web interface.
+This project was originally developed as part of a bachelor thesis and has since been updated periodically. The system measures various environmental parameters and displays the data on an elegant web interface.
 
 ## Features
 - Real-time air quality monitoring
