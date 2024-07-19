@@ -1,76 +1,75 @@
-# Air Quality Monitor
+# 🌬️ Air Quality Monitor
 
-Air Quality Monitor is an embedded system designed to measure and visualize air quality data. Powered by a Raspberry Pi and a BME680 environmental sensor, the system utilizes a React frontend with Tailwind CSS and Chart.js for data visualization.
+A Raspberry Pi-based system for measuring and visualizing air quality data.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+## 🤔 What's Air Quality Monitor?
 
-## Introduction
-This project was originally developed as part of a bachelor thesis and has since been updated periodically. The system measures various environmental parameters and displays the data on an elegant web interface.
+Air Quality Monitor is an embedded system that tracks environmental parameters using a Raspberry Pi and a BME680 sensor. It displays the data through a web interface, making it easy to keep an eye on your air quality.
 
-## Features
-- Real-time air quality monitoring
-- Visualization of temperature, humidity, pressure, and gas resistance data
-- Historical data tracking for the last five days
-- Responsive design using Tailwind CSS
-- Easy integration with Google Sheets for data storage
+### 🌟 Key Features
 
-## Technologies Used
-- **Frontend**: React, Tailwind CSS, Chart.js
-- **Backend**: Node.js (for API integration if needed)
-- **Data Storage**: Google Sheets
-- **Embedded Hardware**: Raspberry Pi, BME680 sensor
+- 🌡️ Measures temperature, humidity, pressure, and gas resistance
+- 📊 Shows real-time data and historical trends
+- ☁️ Stores data in Google Sheets for easy access
+- 💻 Uses a React frontend with Tailwind CSS for a clean, responsive design
 
-## Setup and Installation
+## 🛠️ Setting Up
 
-### Prerequisites
-- Node.js and npm installed
-- Raspberry Pi with BME680 sensor set up and connected
-- Google Cloud service account with access to Google Sheets API
+### You'll Need
 
-### Installation
+- 🍓 Raspberry Pi with a BME680 sensor
+- 📦 Node.js and npm
+- 🌐 Google Cloud account with Sheets API access
 
-1. **Clone the Repository**:
+### Getting Started
+
+1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/air-quality-monitor.git
+   git clone https://github.com/janchruszcz/air-quality-monitor.git
    cd air-quality-monitor
 
-2. **Install Dependencies**:
-    ```bash
-    npm install
+2. Install dependencies:
+   ```bash
+   npm install
+3. Set up your environment:
+Create a `.env` file in the root directory with these variables:
+   ```bash
+   REACT_APP_SPREADSHEET_ID=your_spreadsheet_id
+   REACT_APP_SHEET_ID=your_sheet_id
+   REACT_APP_CLIENT_EMAIL=your_client_email
+   REACT_APP_PRIVATE_KEY="your_private_key"
+4. Start the development server:
+   ```bash
+   npm start
 
-3. **Setup .env variables**:
-    Create a .env file in the root directory and add the following environment variables:
-    ```bash
-    REACT_APP_SPREADSHEET_ID=your_spreadsheet_id
-    REACT_APP_SHEET_ID=your_sheet_id
-    REACT_APP_CLIENT_EMAIL=your_client_email
-    REACT_APP_PRIVATE_KEY="your_private_key"
+## 🚀 Using Air Quality Monitor
 
-4. **Start the Development Server**:
-    ```bash
-    npm start
+1. Make sure your Raspberry Pi is set up and sending data to Google Sheets.
+2. Open `http://localhost:3000` in your browser to see your air quality data.
+3. Use the navigation to switch between different views.
 
+## 💻 Tech Stack
 
-## Usage
-1. Ensure your Raspberry Pi and BME680 sensor are correctly set up and sending data to the Google Sheet.
-2. Access the web interface at `http://localhost:3000` to view real-time and historical air quality data.
-3. Use the navigation bar to switch between different data visualizations.
+- Frontend: React with Tailwind CSS and Chart.js
+- Backend: Node.js for API integration (if needed)
+- Data Storage: Google Sheets
+- Hardware: Raspberry Pi with BME680 sensor
 
-## Contributing
-Contributions are welcome! If you would like to contribute to this project, please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature/your-feature-name`).
-6. Open a pull request.
+## 🤝 Contributing
 
-## License
-All rights reserved.
+If you'd like to contribute:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature-name`)
+3. Make your changes
+4. Commit (`git commit -m 'Add some feature'`)
+5. Push to the branch (`git push origin feature/your-feature-name`)
+6. Open a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+🎓 Air Quality Monitor started as a part of bachelor thesis project and has grown from there. It's designed for anyone interested in tracking their local air quality with a DIY approach.
